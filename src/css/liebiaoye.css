@@ -1,0 +1,150 @@
+.header_t,
+.header,
+.navc,
+.Crumbs {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+}
+
+.Ywrap {
+  width: 1200px;
+}
+
+.Yright {
+  width: 990px;
+  float: right;
+  margin-top: 40px;
+}
+.Yright .YproList2 {
+  overflow: hidden;
+  width: 990px;
+}
+.Yright .YproList2 ul {
+  line-height: 18px;
+  color: #666666;
+  width: 1000px;
+}
+.Yright .YproList2 ul li {
+  float: left;
+  padding: 0px 10px 10px 0px;
+  width: 240px;
+  min-height: 300px;
+}
+.Yright .YproList2 ul li > div {
+  border: 2px solid #fff;
+  padding: 10px 8px 0px;
+  width: 220px;
+}
+.Yright .YproList2 ul li .Ypic {
+  text-align: center;
+  width: 180px;
+  height: 180px;
+  position: relative;
+}
+.Yright .YproList2 ul li .Ypic .yin_ico {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 8px;
+}
+.Yright .YproList2 ul li .Yname {
+  padding-top: 8px;
+  height: 20px;
+  overflow: hidden;
+}
+.Yright .YproList2 ul li .Yname .ico_otc {
+  float: left;
+  margin-right: 10px;
+}
+.Yright .YproList2 ul li .Yname .Yspec {
+  padding-left: 5px;
+}
+.Yright .YproList2 ul li .Yadv {
+  clear: both;
+  padding-top: 5px;
+  height: 18px;
+  overflow: hidden;
+}
+.Yright .YproList2 ul li .Ypribox {
+  padding-top: 5px;
+}
+.Yright .YproList2 ul li .Ypribox span {
+  float: left;
+  color: #ff3f3f;
+  font-size: 16px;
+}
+.Yright .YproList2 ul li .Ypribox i {
+  font-style: normal;
+  float: right;
+  text-decoration: line-through;
+}
+.Yright .YproList2 ul li .Yhave {
+  padding-top: 5px;
+  clear: both;
+}
+.Yright .YproList2 ul a {
+  color: #666666;
+}
+.Yright .YproList2 ul a img {
+  width: 220px;
+}
+
+.ico_otc,
+.ico_otcl,
+.ico_rx,
+.ico_baoj {
+  background: url(../img/ico-kad.png) 0px -568px;
+  width: 34px;
+  margin: 2px 5px 0px 0px;
+  height: 16px;
+  display: inline-block;
+  text-indent: -10em;
+  overflow: hidden;
+  float: left;
+}
+
+.zxf_pagediv {
+  height: 40px;
+  padding-top: 10px;
+  clear: both;
+  line-height: 28px;
+  font-size: 14px;
+  float: right;
+  color: #959595;
+}
+.zxf_pagediv a {
+  color: #4484db;
+  border: 1px solid #e0e0e0;
+  height: 26px;
+  display: inline-block;
+  line-height: 26px;
+  padding: 0 10px;
+  border-radius: 2px;
+}
+.zxf_pagediv span {
+  height: 26px;
+  display: inline-block;
+  line-height: 26px;
+  padding: 0 10px;
+  border-radius: 2px;
+}
+.zxf_pagediv input {
+  border: 1px solid #ccc;
+  font-size: 14px;
+  height: 26px;
+  line-height: 24px;
+  margin: 0 3px;
+  width: 54px;
+}
+.zxf_pagediv .zxfokbtn {
+  color: #4484db;
+  border: 1px solid #e0e0e0;
+  height: 26px;
+  display: inline-block;
+  line-height: 26px;
+  padding: 0 10px;
+  border-radius: 2px;
+}
+
+/*# sourceMappingURL=liebiaoye.css.map */

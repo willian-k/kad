@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/common.js"></script>
+    <script src="./lib/jquery-1.10.1.min.js"></script>
+    <script src="./lib/jquery-2.1.1.min.js"></script>
+    <script src="./lib/countdown.js"></script>
+    <script src="./lib/swiper.min.js"></script>
+    <script src="./js/index.js"></script>
+    <link rel="stylesheet" href="./css/baseM3_double112016_2.css">
+    <link rel="stylesheet" href="./css/swiper.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <div id="layout">
+        <div class="head_t">
+            <div class="head_t_l">
+                <div class="YnewNoLogin">
+                    欢迎来到康爱多网上药店！
+                    <a href="html/denglu.html">登录</a>
+                    <a href="html/zhuce.html">注册</a>
+                </div>
+                <ul class="YnewYesLogin" style="display: none;">
+                    <li>欢迎回来！</li>
+                    <li class="YUserName">
+                        <a href="###"></a>
+                    </li>
+                    <li class="Yout">
+                        <a href="###">退出</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="head_t_r">
+                <ul class="hNavList">
+                    <li class="Ywebnav">
+                        <span class="Ycen"></span>
+                        <span class="Yico_dian"></span>
+                        <span class="tlast">网站导航</span>
+                        <div class="Ytopnavdiv">
+                            <dl>
+                                <dt>特色频道</dt>
+                                <dd><a href="###">男科中心</a></dd>
+                                <dd><a href="###">医疗器械</a></dd>
+                            </dl>
+                            <dl class="d2">
+                                <dt>健康工具</dt>
+                                <dd><a href="###">掌上药店</a></dd>
+                                <dd><a href="###">自助找药</a></dd>
+                            </dl>
+                            <dl>
+                                <dt>健康知多点</dt>
+                                <dd><a href="###">健康指南</a></dd>
+                                <dd><a href="###">健康问答</a></dd>
+                                <dd><a href="###">肝胆科</a></dd>
+                                <dd><a href="###">皮肤科</a></dd>
+                                <dd><a href="###">呼吸科</a></dd>
+                                <dd><a href="###">减肥瘦身</a></dd>
+                                <dd><a href="###">两性健康</a></dd>
+                                <dd><a href="###">妇科</a></dd>
+                                <dd><a href="###">母婴</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="YService">
+                        <span class="Ycen"></span>
+                        <span class="Yico_dian"></span>
+                        <span class="tlast">客户服务</span>
+                        <div class="Ytopnavdiv">
+                            <dl class="Ymykadc">
+                                <dd><a rel="nofollow" href="###">帮助中心</a></dd>
+                                <dd><a rel="nofollow" href="###">联系我们</a></dd>
+                                <dd><a rel="nofollow" href="###">投诉建议</a></dd>
+                                <dd style="display:none"><a rel="nofollow" href="###">厂商合作</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="ttel">400-8811-020</li>
+                    <li class="tcart"><a href="html/gouwuche.html">购物车<span name="kadCartNum"
+                                style="color:red;padding:0;font-weight:bold;">0</span>件</a></li>
+                    <li class="Ymyorder">
+                        <span class="Ycen"></span>
+                        <span class="Yico_dian"></span>
+                        <a rel="nofollow" href="###" class="tlast">我的订单</a>
+                        <div class="Ytopnavdiv">
+                            <dl class="Ymyorderc">
+                                <dd class="YNopay"><a rel="nofollow" href="###">待付款订单</a>
+                                </dd>
+                                <dd class="YNosure"><a rel="nofollow" href="###">待确认收货</a>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="Ymykad">
+                        <span class="Ycen"></span>
+                        <span class="Yico_dian"></span>
+                        <a rel="nofollow" href="###" class="tlast">我的康爱多</a>
+                        <div class="Ytopnavdiv">
+                            <dl class="Ymykadc">
+                                <dd><a rel="nofollow" href="###">我的处方</a></dd>
+                                <dd><a rel="nofollow" href="###">我的收藏</a></dd>
+                                <dd><a rel="nofollow" href="###">收货地址</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="header-bg">
+        <div class="header">
+            <div class="header_l" style="width: 342px; float: left;">
+                <a href="###"><img src="./img/CgAgFVviryCAErgRAABrkiEX-ts677.gif"></a>
+            </div>
+            <div class="header_r">
+                <form name="search" id="searchForm" style="">
+                    <div class="header_search" id="txtSearchbox1">
+                        <input id="pageText" name="pageText" value="" class="stxt" placeholder="铁打损伤">
+                        <input type="submit" class="sbtn" value="搜索" id="BtnSearchProdut">
+
+                        <div class="search_history">
+                            <div class="search_history_l">
+                                <div class="y_history">
+                                    <p class="search_history_t">历史记录：<span><a href="javascript:;" id="his_clearAll"
+                                                style="display:none;" onclick="delSeacHislist()">清空</a></span></p>
+                                    <ul class="s_historylist" id="s_historylist"></ul>
+                                    <div class="no_history">
+                                        <p><img src="./img/no-history.jpg" alt=""></p>
+                                        <p>亲，您还没有历史记录哦</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="search_history_r">
+                                <p>正在热搜中：</p>
+                                <div id="s_history_r">
+                                    <a href="###" title="生精片">生精片</a>
+                                    <a href="###" title="前列腺炎">前列腺炎</a>
+                                    <a href="###" title="恩替卡韦">恩替卡韦</a>
+                                    <a href="###" title="阿达帕林凝胶">阿达帕林凝胶</a>
+                                    <a href="###" title="金匮肾气丸">金匮肾气丸</a>
+                                    <a href="###" title="锁阳固精丸">锁阳固精丸</a>
+                                    <a href="###" title="皮肤性病">皮肤性病</a>
+                                    <a href="###" title="安宫牛黄丸">安宫牛黄丸</a>
+                                    <a href="###" title="麒麟丸">麒麟丸</a>
+                                    <a href="###" title="康瑞保">康瑞保</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+                <p class="header_r_d">
+                    <a style="color:black" href="###" adid="v2_searchHotWord_07">营养保健</a>
+                    <a style="color:red" href="###" adid="v2_searchHotWord_03">滋补养生</a>
+                    <a style="color:#959595" href="###" adid="v2_searchHotWord_04">防治口腔溃疡</a>
+                    <a style="color:black" href="###" adid="v2_searchHotWord_11">男得好货</a>
+                    <a style="color:red" href="###" adid="v2_searchHotWord_08">拼团低至9.9元</a>
+                    <a style="color:black" href="###" adid="v2_searchHotWord_02">体检卡</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="nav" style="position: relative; ">
+        <div class="navc  itmes_wrap">
+            <div class="categorys">
+                <h2>
+                    <a href="###">全部分类</a>
+                </h2>
+                <div class="lNav" style="display:block;">
+                    <ul class="lNav_lists" id="lNav_lists">
+                        <!-- <li>
+                                    <div class="list_t">
+                                        <a href="###"><b>专科用药</b></a>
+                                        |
+                                        <a href="###">肾宝片</a>
+                                        &nbsp;
+                                        <a href="###">阿胶</a>
+                                    </div>
+                                    <div class="lNav_pop"></div>
+                                </li> -->
+                    </ul>
+                </div>
+            </div>
+            <ul class="navclist">
+                <li>
+                    <a href="###">首页</a>
+                </li>
+                <li>
+                    <a href="html/liebiaoye.html">药品</a>
+                </li>
+                <li>
+                    <a href="###">非药品</a>
+                </li>
+                <li>
+                    <a href="###">男科中心</a>
+                </li>
+                <li>
+                    <a href="###">美肤商城</a>
+                </li>
+                <li style="width:2px;">
+                    <span style="display:block;margin-top:13px;width:1px;height: 14px;background: white;"></span>
+                </li>
+                <li class="kad-mc-ask" id="kad-mc-ask1" style="color: rgb(20, 20, 20);">
+                    <a href="javascript:void(0);">资讯中心</a>
+                    <i
+                        style="border-color: rgb(0, 0, 0) transparent transparent; width: 0px; height: 0px; border-width: 5px; font-size: 0px; line-height: 0; border-style: solid dashed dashed;"></i>
+
+                    <div class="kad-mc-askBox" id="kad-mc-askBox1" style="width: 222px; height: 96px; display: none;">
+                        <a class="pl16" title="健康指南" href="###">健康指南</a>
+                        <a title="健康资讯" href="###">健康资讯</a>
+                        <a class="pl16" title="皮肤科资讯" href="###">皮肤科资讯</a>
+                        <a title="呼吸科资讯" href="###">呼吸科资讯</a>
+                        <a class="pl16" title="妇科资讯" href="###">妇科资讯</a>
+                        <a title="减肥瘦身" href="###">减肥瘦身</a>
+                        <a class="pl16" title="两性健康" href="###" style="">两性健康</a>
+                        <a title="健康问答" href="###">健康问答</a>
+                    </div>
+
+                </li>
+                <li>
+                    <a href="###">慢性病专场</a>
+                </li>
+                <li class="kad-mc-ask" id="kad-mc-ask2" style="color: rgb(20, 20, 20);">
+                    <a href="javascript:void(0);">掌上康爱多</a>
+                    <i
+                        style="border-color: rgb(0, 0, 0) transparent transparent; width: 0px; height: 0px; border-width: 5px; font-size: 0px; line-height: 0; border-style: solid dashed dashed;"></i>
+
+                    <div class="kad-mc-askBox" id="kad-mc-askBox"
+                        style="width: 140px; height: 355px; text-align: center; border-width: 0px 1px 1px; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-right-color: rgb(218, 218, 218); border-bottom-color: rgb(218, 218, 218); border-left-color: rgb(218, 218, 218); border-image: initial; border-top-style: initial; border-top-color: initial; display: none;">
+                        <img src="./img/hand.png" style="margin-top:19px;">
+                        <p class="fistP">4件装仅9.9元</p>
+                        <p class="secendP">APP首单减10元</p>
+                        <img src="./img/hand2.jpg" style="margin-top:6px;">
+                        <p class="fistP">关注微信</p>
+                        <p class="secendP">抽现金红包</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="###">超值秒杀</a>
+                </li>
+
+            </ul>
+        </div>
+        <div id="nav" style="position: relative; ">
+
+            <div class="mainBody">
+                <div class="itmes_wrap clearfix">
+                    <div class="swiper-container" id="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="./img/CgAgFFzOkcmAW9GIAAFeXgyAmtI165.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./img/CgAgFFzQ6yCAbJuHAAGCGIBj3H8944.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./img/CgAgFFzQ5YOATh6AAAE_ZVwagJI174.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./img/CgAgFFzP2WiAX8L0AAIMuxDd4aY814.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./img/CgAgFFzPtkqADZytAAHpOzujUp4166.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./img/CgAgFVzIH2eAHC0hAAFYQQrbUS0625.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./img/CgAgFFzHq6eAGctkAAMPT8ddoxk859.jpg" alt="">
+                            </div>
+                        </div>
+                        <!--按钮-->
+                        <div class="swiper-button-prev" style="display: none"></div>
+                        <div class="swiper-button-next" style="display: none"></div>
+                        <!--分页-->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <div class="rightSide">
+                    <div class="msg_rightSide clearfix">
+                        <ul>
+                            <li>
+                                <img src="./img/zheng1.png">
+                                <p>正品保证</p>
+                            </li>
+                            <li>
+                                <img src="./img/zheng2.png">
+                                <p>专业药师</p>
+                            </li>
+                            <li>
+                                <img src="./img/sou.png">
+                                <p>厂家授权 </p>
+                            </li>
+                            <li style="padding-top:9px;">
+                                <img src="./img/zheng4.png">
+                                <p>隐私包装</p>
+                            </li>
+                            <li style="padding-top:9px;">
+                                <img src="./img/zheng5.png">
+                                <p>货到付款</p>
+                            </li>
+                            <li style="padding-top:9px;">
+                                <img src="./img/zheng3.png">
+                                <p>满79包邮</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="yaozi">
+                        <div>
+                            <span class="zixunY">药师咨询</span>
+                            <span class="phoneN">400-8811-020</span>
+                        </div>
+                    </div>
+
+                    <div class="Sinfor">
+                        <a href="###">监管信息发布</a>
+                    </div>
+                    <div class="kadN_msg" style="height:166px;" adid="ad_home_scrollright_double112016_02">
+                        <a href="###"><img src="./img/CgAgFFoD-tOAMGfCAABCbkCYe7M761.jpg"
+                                style="height:170px;width: 210px;"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mainBody_box">
+                <div class="hotPro">
+                    <div class="hotProHeader">
+                        <h3>超值秒杀</h3>
+                        <div class="hotProM">
+                            <p id="TimeCountDonw_" class="seckill_p2">
+                                <i></i>剩余<div class="container timeBar ys2" data="7200"></div>
+                            </p>
+                        </div>
+                        <div class="hotProR">
+                            <div class="hotPage" id="hotPage"><b class="reduction">1</b><b>/</b><b class="plus">2</b>
+                            </div>
+                            <div class="direction">
+                                <span class="r"><img src="./img/rightIcon.png" data-pin-nopin="true"></span>
+                                <span class="s"><img src="./img/leftIcon.png" data-pin-nopin="true"></span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id="hotProC">
+                        <ul style="width: 2396px; left: 0px;">
+                            <!-- <li>
+                            <div class="zhe" style="background:url(./img/zebg.png) no-repeat;">
+                                <span class="zheS">5.5</span>折</div>
+                            <p style="text-align:center"><a href="###"><img style="width:150px;height:150px;"
+                                        src="./img/CgAgFVwXVD6ABCVuAAEliPYwqb4335.jpg_320x320.jpg"
+                                        title="恒健 跌打万花油 10ml"></a></p>
+                            <div class="clum">
+                                <dl>
+                                    <dd class="secentLi"><a href="###" title="恒健 跌打万花油 10ml">恒健 跌打万花油 10ml</a></dd>
+                                    <dd class="thirdLi"><span class="newPrice">￥1.6</span><span
+                                            class="oldPrice">￥2.9</span></dd>
+                                </dl>
+                            </div>
+                        </li> -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="changeP" id="changeP">
+                    <h3>健康推荐</h3>
+                    <a href="javascript:void(0);" class="changeBtn">
+                        换一批
+                        <img src="./img/changbtn2.jpg">
+                    </a>
+                    <div class="clear"></div>
+                    <ul style="position: relative;">
+                        <!-- <li><a href="###" class="imgpro"><img style="width:180px;height:180px;"
+                                src="./img/CgAgFFt-KjyAP7EbAAFa1-VxzZM565.jpg_180x180.jpg" title="汇仁 肾宝片 0.7g*126片"></a>
+                        <div class="hotPadding">
+                            <p class="nameC"><a href="###" title="汇仁 肾宝片 0.7g*126片">汇仁 肾宝片 0.7g*126片</a></p>
+                            <p class="priceC">￥322.00</p>
+                        </div>
+                    </li> -->
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+                <div class="ad1">
+                    <a id="ad_home_banner_n1-2" href="###"><img src="./img/CgAgFVzT4K6AWDi_AACxX1GUrJQ576.jpg"
+                            alt="大促-节点1"></a>
+                </div>
+                <div class="floor">
+                    <div class="louHeader">
+                        <span class="louN color1">1F 家庭常备</span>
+                        <div class="louR">
+                            <dl>
+                                <dt>热门关键字：</dt>
+                                <dd class="notPro">
+                                    <span class="hotIcon">
+                                        <img src="./img/hotIcon.png">
+                                    </span><a href="###">皮肤瘙痒</a>
+                                </dd>
+                                <dd><a href="###">皮炎湿疹</a></dd>
+                                <dd class="padding20"><a href="###">跌打损伤</a></dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="contextLou" id="contextLou1">
+                        <div class="contextL">
+                            <div class="louLink">
+                                <ul>
+                                    <!-- <li><a href="###" style="color:#f7082a">风寒感冒</a></li> -->
+                                </ul>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="louLogo">
+                                <ul>
+                                    <li id="pro_link1_logo1"><a href="###"><img
+                                                src="./img/CgAgEFaoYoaAeSxHAAAKyLYkEWk049.jpg" alt=""></a></li>
+                                    <li id="pro_link1_logo2"><a href="###"><img
+                                                src="./img/CgAgEFaoYyGABkMYAAAGAuIJfuA418.jpg" alt=""></a></li>
+                                    <li id="pro_link1_logo3"><a href="###"><img
+                                                src="./img/CgAgEFaoY06AEAmYAAANLZH4PGU977.jpg" alt=""></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="contextM" id="contextM1">
+                            <div class="swiper-container1" id="swiper-container1">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="./img/CgAgFVnKGTSAHhUhAADcYE0MQqs289.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/CgAgFVrUcsuAcO8DAAFV1EPNLdc492.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/CgAgFVsV8OCAdN-eAAE0tvNsh8Y866.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/CgAgFVuDa7qAYEhEAAEgWlN-fyw575.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/CgAgFVuGNXuAHkL6AAJCbXHa_9g797.jpg" alt="">
+                                    </div>
+                                </div>
+                                <!--分页-->
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <div class="contextR">
+                            <ul>
+                                <!-- <li class="floor_m">
+                                <a id="ad_home_floor1_m2" href="###"><img
+                                        src="./img/CgAgFFvFW3GAA4miAAEERnmMokg886.jpg"
+                                        alt="1F家庭常备"></a>
+                            </li>
+                            <li>
+                                <p class="pic">
+                                    <a href="###"><img border="0"
+                                            alt="太极 藿香正气口服液 10ml*10支/盒" title="太极 藿香正气口服液 10ml*10支/盒"
+                                            src="./img/CgAgFVqovGaAPIktAAHZ-I95LeU816.jpg_180x180.jpg"></a>
+                                </p>
+                                <p class="proName"><a href="###"
+                                        title="太极 藿香正气口服液 10ml*10支/盒">
+                                        理气和中 高性价比
+                                    </a></p>
+                                <p class="proNumber"><a href="###"
+                                        title="太极 藿香正气口服液 10ml*10支/盒">太极 藿香正气口服液 10ml*10支/盒</a></p>
+                                <p class="proPrice">￥23.80</p>
+                            </li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="floor">
+                    <div class="louHeader">
+                        <span class="louN color1">2F 母婴乐园</span>
+                        <div class="louR">
+                            <dl>
+                                <dt>热门关键字：</dt>
+                                <dd class="notPro">
+                                    <span class="hotIcon">
+                                        <img src="./img/hotIcon.png">
+                                    </span><a href="###">宝宝湿疹</a>
+                                </dd>
+                                <dd><a href="###">妊娠纹</a></dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="contextLou" id="contextLou1">
+                        <div class="contextL">
+                            <div class="louLink">
+                                <ul>
+                                    <!-- <li><a href="###" style="color:#f7082a">风寒感冒</a></li> -->
+                                </ul>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="louLogo">
+                                <ul>
+                                    <li id="pro_link1_logo1"><a href="###"><img
+                                                src="./img/CgAgEFaoYoaAeSxHAAAKyLYkEWk049.jpg" alt=""></a></li>
+                                    <li id="pro_link1_logo2"><a href="###"><img
+                                                src="./img/CgAgEFaoYyGABkMYAAAGAuIJfuA418.jpg" alt=""></a></li>
+                                    <li id="pro_link1_logo3"><a href="###"><img
+                                                src="./img/CgAgEFaoY06AEAmYAAANLZH4PGU977.jpg" alt=""></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="contextM" id="contextM1">
+                            <div class="swiper-container2" id="swiper-container2">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="./img/CgAgFVnKGTSAHhUhAADcYE0MQqs289.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/CgAgFVrUcsuAcO8DAAFV1EPNLdc492.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/CgAgFVsV8OCAdN-eAAE0tvNsh8Y866.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/CgAgFVuDa7qAYEhEAAEgWlN-fyw575.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/CgAgFVuGNXuAHkL6AAJCbXHa_9g797.jpg" alt="">
+                                    </div>
+                                </div>
+                                <!--分页-->
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <div class="contextR">
+                            <ul>
+                                <!-- <li class="floor_m">
+                                <a id="ad_home_floor1_m2" href="###"><img
+                                        src="./img/CgAgFFvFW3GAA4miAAEERnmMokg886.jpg"
+                                        alt="1F家庭常备"></a>
+                            </li>
+                            <li>
+                                <p class="pic">
+                                    <a href="###"><img border="0"
+                                            alt="太极 藿香正气口服液 10ml*10支/盒" title="太极 藿香正气口服液 10ml*10支/盒"
+                                            src="./img/CgAgFVqovGaAPIktAAHZ-I95LeU816.jpg_180x180.jpg"></a>
+                                </p>
+                                <p class="proName"><a href="###"
+                                        title="太极 藿香正气口服液 10ml*10支/盒">
+                                        理气和中 高性价比
+                                    </a></p>
+                                <p class="proNumber"><a href="###"
+                                        title="太极 藿香正气口服液 10ml*10支/盒">太极 藿香正气口服液 10ml*10支/盒</a></p>
+                                <p class="proPrice">￥23.80</p>
+                            </li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="hotBrand">
+                    <h3>热门品牌</h3>
+                    <ul>
+                        <!-- <li>
+                        <a href="###" id="ad_home_hotlogo01">
+                            <img src="./img/CgAgEFbj3d-AZnuBAAAKXWNhZL8937.jpg"
+                                alt="百多邦">
+                        </a>
+                    </li> -->
+                    </ul>
+                    <div id="footer-link">
+                        <div class="footer-link-title">中慈助医</div>
+                        <div class="footer-link-list">
+                            <a href="###">中慈助医患者援助申请平台</a>
+                            <a href="###">中慈助医发药点管理系统</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wrap_footer" style="width: 100%;">
+                <div class="item01">
+                    <div class="width1200">
+                        <dl>
+                            <dd>
+                                <img src="./img/zheng1.png">
+                                <div class="medicineWorld">
+                                    <p class="t">正品保障</p>
+                                    <p>国家认证 正规合法</p>
+                                </div>
+                            </dd>
+                            <dd>
+                                <img src="./img/zheng2.png">
+                                <div class="medicineWorld">
+                                    <p class="t">专业药师</p>
+                                    <p>用药全程指导 </p>
+                                </div>
+                            </dd>
+                            <dd>
+                                <img src="./img/sou.png">
+                                <div class="medicineWorld">
+                                    <p class="t">厂家授权 </p>
+                                    <p>厂家授权 正品渠道</p>
+                                </div>
+                            </dd>
+                            <dd>
+                                <img src="./img/zheng5.png">
+                                <div class="medicineWorld">
+                                    <p class="t">货到付款</p>
+                                    <p>货到付款 购药无忧</p>
+                                </div>
+                            </dd>
+
+                            <dd>
+                                <img src="./img/zheng4.png">
+                                <div class="medicineWorld">
+                                    <p class="t">隐私配送</p>
+                                    <p>安全放心 隐私配送</p>
+                                </div>
+                            </dd>
+                            <dd style="padding-right:0;">
+                                <img src="./img/zheng3.png">
+                                <div class="medicineWorld">
+                                    <p class="t"> 满79元包邮</p>
+                                    <p> 全场满79元包邮</p>
+                                </div>
+                            </dd>
+                            <div class="clear"></div>
+                        </dl>
+
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="item01 item02">
+                    <div class="width1200 clearfix">
+                        <div class="lside">
+                            <div class="appCode">
+                                <p class="title">手机购药</p>
+                                <p class="code"></p>
+                                <p class="clearfix pl8">
+                                    注册送100元
+                                </p>
+                            </div>
+                            <div class="weixinCode">
+                                <p class="title">微信购药</p>
+                                <p class="code"
+                                    style="background:url(./img/code1.jpg) no-repeat center center;background-size:106px 106px;">
+                                </p>
+                                <p class="title02" style="width:106px;margin:0;">
+                                    抽现金红包
+                                </p>
+                            </div>
+                        </div>
+                        <div class="mside">
+                            <ul class="clearfix">
+                                <li>
+                                    <p class="title">新手指南</p>
+                                    <p><a href="###" rel="nofollow">购物流程</a></p>
+                                    <p><a href="###" rel="nofollow">会员级别</a></p>
+                                    <p><a href="###" rel="nofollow">积分说明</a></p>
+                                    <p><a href="###" rel="nofollow">优惠券</a></p>
+                                    <p><a href="###" rel="nofollow">常见问题</a></p>
+                                </li>
+                                <li>
+                                    <p class="title">配送方式</p>
+                                    <p><a href="###" rel="nofollow">配送范围及运费</a></p>
+                                    <p><a href="###" rel="nofollow">隐私配送</a></p>
+                                    <p><a href="###" rel="nofollow">商品验收及签收</a></p>
+                                </li>
+                                <li>
+                                    <p class="title">支付方式</p>
+                                    <p><a href="###" rel="nofollow">货到付款</a></p>
+                                    <p><a href="###" rel="nofollow">网上支付</a></p>
+                                    <p><a href="###" rel="nofollow">银行转账</a></p>
+                                </li>
+                                <li>
+                                    <p class="title">售后服务</p>
+                                    <p><a href="###" rel="nofollow">退换货流程</a></p>
+                                    <p><a href="###" rel="nofollow">退换货政策</a></p>
+                                    <p><a href="###" rel="nofollow">退款流程</a></p>
+                                </li>
+                                <li>
+                                    <p class="title">特色服务</p>
+                                    <p><a href="###" rel="nofollow">会员俱乐部</a></p>
+                                    <p><a href="###" rel="nofollow">投诉建议</a></p>
+                                    <p><a href="###" rel="nofollow">健康咨询</a></p>
+                                    <p><a href="###" rel="nofollow">免责声明 </a></p>
+                                </li>
+                                <li class="phonePic">
+                                    <p><img src="./img/kadPhoneBg.png" alt=""></p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_list" style="width: 100%;">
+                <div class="width1200">
+                    <p>
+                        <span class="title">政府机构：</span><a href="###" rel="nofollow">国家卫生和计划生育委员会</a>
+                        <a href="###" rel="nofollow">国家食品药品监督管理总局</a>
+                        <a href="###" rel="nofollow">广东省卫生和计划生育委员会</a>
+                        <a href="###" rel="nofollow">广东省食品药品监督管理局</a>
+                    </p>
+                    <p class="clearfix friendLinks" style="height: 22px;">
+                        <span class="title fl">友情链接：</span>
+                        <span class="friendList fl linkBox">
+                            <!-- <a href="###">环球医药招商网</a> -->
+                        </span>
+                    </p>
+                    <p class="aboutKadList">
+                        <a rel="nofollow" href="###" class="pifa_shop">批发商洽<span></span></a> |
+                        <a rel="nofollow" href="###">关于我们</a> |
+                        <a href="###" rel="nofollow">掌上药店</a> |
+                        <a rel="nofollow" href="###">实体药店</a> |
+                        <a rel="nofollow" href="###">加入康爱多</a> |
+                        <a href="###" rel="nofollow">联系我们</a> |
+                        <a href="###" rel="nofollow">经营认证</a> |
+                        <a rel="nofollow" href="###">友情链接</a> |
+                        <a href="###">TAG列表</a> |
+                        <a href="###">网站地图</a> |
+                        <a href="###">CPS联盟</a>
+                    </p>
+                    <p class="diploma_list" style="padding-bottom:0px">
+                        <a class="pr8" rel="nofollow" title="互联网药品交易服务资格证书" href="###">互联网药品交易服务资格证书</a>|
+                        <span class="bottomPadding01">
+                            <a rel="nofollow" title="互联网药品信息服务资格证书" href="###">互联网药品信息服务资格证书</a>
+                        </span>|
+                        <span class="bottomPadding01">
+                            <a rel="nofollow" title="执业药师证" href="###">执业药师证</a>
+                        </span>|
+                        <span class="bottomPadding02">
+                            <a rel="nofollow" title="药品经营许可证" href="###">药品经营许可证</a>
+                        </span>|
+
+                        <span class="bottomPadding02">
+                            <a rel="nofollow" title="食品经营许可证" href="###">食品经营许可证</a>
+                        </span>|
+                        <span class="bottomPadding02">
+                            <a rel="nofollow" title="公司营业执照" href="###">公司营业执照</a>
+                        </span>|
+                        <span>
+                            <a rel="nofollow" title="GSP认证证书" href="###">GSP认证证书</a>
+                        </span>|
+
+                    </p>
+                    <p class="diploma_list" style="padding-bottom:0px">
+                        <span>
+                            <a href="###" rel="nofollow">增值电信业务经营许可证 </a>
+                        </span>|
+                        <span>
+                            <a href="###" rel="nofollow">医疗器械经营许可证</a>
+                        </span>|
+                        <span>
+                            <a href="###" rel="nofollow">第二类医疗器械经营备案凭证</a>
+                        </span>|
+                        <span>
+                            <a href="###" rel="nofollow">医疗器械网络销售备案</a>
+                        </span>|
+                    </p>
+                    <p class="diploma_list">
+                        <span>
+                            <a href="###" rel="nofollow">国家食品药品监督管理总局-数据查询</a>
+                        </span>|
+                        <span>
+                            <a href="###" rel="nofollow">广东省食品药品监督管理局-数据库查询</a>
+                        </span>
+                    </p>
+                    <ul class="hyRz clearfix">
+                        <li>
+                            <a rel="nofollow" href="###" title="粤ICP备10212320号-1">
+                                <img src="./img/tool_icon1.png" alt="粤ICP备10212320号-1" style="display: inline;">
+                            </a>
+                            <a class="txt" rel="nofollow" title="粤ICP备10212320号-1" href="###">粤ICP备10212320号-1</a>
+                        </li>
+                        <li>
+                            <a rel="nofollow" href="###" title="网络110报警服务">
+                                <img src="./img/tool_icon2.png" alt="网络110报警服务" style="display: inline;">
+                            </a>
+                            <a class="txt item01" rel="nofollow" title="网络110报警服务" href="###">
+                                网络110报警服务
+                            </a>
+                        </li>
+
+                        <li>
+                            <a rel="nofollow" href="###" title="红盾电子链接标识">
+                                <img data-original="./img/tool_icon5.jpg" src="./img/tool_icon5.jpg" alt=""
+                                    style="display: inline;">
+                            </a>
+                            <a class="txt item01 item02" rel="nofollow" title="红盾电子链接标识" href="###">
+                                红盾电子链接标识
+                            </a>
+                        </li>
+                        <li>
+                            <a key="5491366eefbfb06e545f4a75" logo_size="83x30" logo_type="common" rel="nofollow"
+                                href="###">
+                                <b id="aqLogoNTMPV" style="display: none;"></b><img src="./img/aqkx_83x30.png"
+                                    alt="安全联盟认证" width="83" height="30" style="border: none;">
+                            </a>
+                        </li>
+                        <li>
+                            <a id="___szfw_logo___" href="###"><img src="./img/cert.png" border="0"></a>
+                        </li>
+                        <li>
+                            <a style="display:block;padding-top:4px;" key="51c2d63c6856be2ce1761dce" logo_size="83x30"
+                                logo_type="business" rel="nofollow" href="###">
+
+                                <span style="display:none;" class="LOGO_aq_jsonp_wrap_" id="AQ_logo_span_init_2"></span>
+                                <img src="./img/hy_83x30.png" alt="安全联盟认证" width="83" height="30" style="border: none;">
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="bottom">©2010-2019 广东<a href="###">康爱多网上药店</a>版权所有，并保留所有权利</p>
+                </div>
+            </div>
+        </div>
+        <div class="fixed_searchBox" id="fixed_searchBox" style="display: none;">
+            <div class="search_wrap itmes_wrap" style="position:relative;" id="fixed_B">
+                <a href="/"><img src="img/little_kadLog2.png" alt=""></a>     
+            </div>
+        </div>
+</body>
+
+</html>

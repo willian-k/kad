@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../lib/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/zhuce.js"></script>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/zhuce.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="header" style="height: 100px;">
+        <div class="header-list3">已有账号，<a href="denglu.html">立即登录&gt;</a></div>
+    </div>
+    <div style="background-color: blue; width: auto; height: 2px;"></div>
+    <div id="container" class="container-register">
+        <h3 class="register-title">
+            欢迎注册康爱多账号
+        </h3>
+        <div class="register-from">
+
+            <div class="bind-input-wrap clearfix">
+                <div class="bind-input">
+                    <p class="user-font">手<i class="phoneNum"></i>机<i class="phoneNum"></i>号<i class="phoneNum"></i>码
+                    </p>
+                    <input name="tianchongnimei" type="text" style="display:none">
+                    <input name="tianchongnimei" maxlength="11" type="tel" class="user-name" id="txtMobile" value=""
+                        placeholder="请输入手机号码">
+                    <input name="tianchongnimei" type="text" style="display:none">
+                    <p class="yes-icon" style="display:none" id="mobileIcon"><i></i></p>
+                </div>
+                <p class="input-prompt bind-cont-prompt" style="display: none;" id="mobileErrorMsg">
+                    <i class="prompt-icon"></i>
+                    <span class="prompt-size">该手机号已存在，您可以直接使用该号码进行 <a href="javascript:void(0);"> 直接登录</a>！</span>
+                </p>
+            </div>
+            <div class="bind-input-wrap clearfix">
+                <div class="bind-input">
+                    <p class="user-font">密<i class="indentSize2"></i>码</p>
+                    <input name="tianchongnimei" maxlength="20" type="password" class="user-name" id="txtPwd" value=""
+                        placeholder="请输入您的密码">
+                    <p id="showPwd" class="yes-icon eye-icon"><i id="isShowPwd"></i></p>
+                </div>
+                <p class="input-prompt bind-cont-prompt" style="display: none;" id="pwdErrorMsg">
+                    <i class="prompt-icon"></i>
+                    <span class="prompt-size">请输入您的密码！</span>
+                </p>
+            </div>
+
+            <div id="kad_web_aliacs_container" class="bind-input-wrap clearfix nc-container nc-prepared"
+                style="margin-bottom: 4px; height: 150px;">
+                <div id="nc_1_container" class="nc-container nc-scrape" style="width: 480px;">
+                    <div id="nc_1_for-tmp" class="nc-for-tmp"></div>
+                    <div id="nc_1_toolbar" class="nc-toolbar"><span id="nc_1_title" class="nc-title"><span
+                                class="nc-lang-cnt" data-nc-lang="_ggk_guide">请摁住鼠标左键，刮出XXX</span></span></div>
+                    <div id="nc_1_nc-canvas" class="nc-canvas" style="width: 480px; height: 100px;">
+
+                    </div>
+                </div>
+            </div>
+            <div class="bind-input-wrap clearfix">
+                <div class="bind-code">
+                    <p class="user-font code-font">短信验证码</p>
+                    <input type="text" maxlength="6" class="code-name" name="" id="txtMobileCode" value=""
+                        placeholder="请输入短信验证码">
+                </div>
+                <div id="getCode" class="code-email background-gray">点击获取短信验证码</div>
+                <p class="input-prompt bind-cont-prompt" style="display: none;" id="mobileCodeErrorMsg">
+                    <i class="prompt-icon"></i>
+                    <span class="prompt-size">您输入的验证码有误！</span>
+                </p>
+            </div>
+            <p class="bind-size clearfix"><input class="Cinput" type="checkbox" checked="true" name="" id="kadText"
+                    value=""><span class="fl">我已阅读并同意<a href="###">《康爱多网上药店服务协议》</a>及<a href="###">隐私声明</a></span></p>
+            <a href="javascript:;" id="toLogin" class="login-btn background-gray">立即注册</a>
+            <div class="pay-type">
+                <div class="payt-top">
+                    <p class="paytop-name">使用合作网站账号登录康爱多</p>
+                    <p class="paytop-line"></p>
+                </div>
+                <ul class="clearfix">
+                    <li class="ptype-wechat"><a title="微信登录" href="###"></a>
+                    </li>
+                    <li class="ptype-qq"><a title="QQ登录" href="###"></a>
+                    </li>
+
+                    <li class="ptype-zfb"><a title="支付宝登录" href="###"></a>
+                    </li>
+                    <li class="ptype-sina"><a title="新浪微博登录" href="###"></a>
+                    </li>
+                    <li class="ptype-ykt"><a title="健保通（医卡通）登录" href="###"></a>
+                    </li>
+                </ul>
+            </div>
+            <!--20160810add-->
+        </div>
+    </div>
+    <div id="footer"></div>
+
+</body>
+
+</html>

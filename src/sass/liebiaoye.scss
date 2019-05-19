@@ -1,0 +1,169 @@
+
+.header_t,
+.header,
+.navc,
+.Crumbs {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+}
+
+.Ywrap {
+    width: 1200px;
+}
+
+.Yright {
+    width: 990px;
+    float: right;
+    margin-top: 40px;
+
+    .YproList2 {
+        overflow: hidden;
+        width: 990px;
+
+        ul {
+            line-height: 18px;
+            color: #666666;
+            width: 1000px;
+
+            li {
+                float: left;
+                padding: 0px 10px 10px 0px;
+                width: 240px;
+                min-height: 300px;
+
+                >div {
+                    border: 2px solid #fff;
+                    padding: 10px 8px 0px;
+                    width: 220px;
+                }
+
+                .Ypic {
+                    text-align: center;
+                    width: 180px;
+                    height: 180px;
+                    position: relative;
+
+                    .yin_ico {
+                        display: none;
+                        position: absolute;
+                        right: 10px;
+                        top: 8px;
+                    }
+                }
+
+                .Yname {
+                    padding-top: 8px;
+                    height: 20px;
+                    overflow: hidden;
+
+                    .ico_otc {
+                        float: left;
+                        margin-right: 10px;
+                    }
+
+                    .Yspec {
+                        padding-left: 5px;
+                    }
+                }
+
+                .Yadv {
+                    clear: both;
+                    padding-top: 5px;
+                    height: 18px;
+                    overflow: hidden;
+                }
+
+                .Ypribox {
+                    padding-top: 5px;
+
+                    span {
+                        float: left;
+                        color: #ff3f3f;
+                        font-size: 16px;
+                    }
+
+                    i {
+                        font-style: normal;
+                        float: right;
+                        text-decoration: line-through;
+                    }
+                }
+
+                .Yhave {
+                    padding-top: 5px;
+                    clear: both;
+                }
+            }
+
+            a {
+                color: #666666;
+
+                img {
+                    width: 220px;
+                }
+            }
+        }
+    }
+}
+
+.ico_otc,
+.ico_otcl,
+.ico_rx,
+.ico_baoj {
+    background: url(../img/ico-kad.png) 0px -568px;
+    width: 34px;
+    margin: 2px 5px 0px 0px;
+    height: 16px;
+    display: inline-block;
+    text-indent: -10em;
+    overflow: hidden;
+    float: left;
+}
+
+.zxf_pagediv {
+    height: 40px;
+    padding-top: 10px;
+    clear: both;
+    line-height: 28px;
+    font-size: 14px;
+    float: right;
+    color: #959595;
+
+    a {
+        color: #4484db;
+        border: 1px solid #e0e0e0;
+        height: 26px;
+        display: inline-block;
+        line-height: 26px;
+        padding: 0 10px;
+        border-radius: 2px;
+    }
+
+    span {
+        height: 26px;
+        display: inline-block;
+        line-height: 26px;
+        padding: 0 10px;
+        border-radius: 2px;
+    }
+
+    input {
+        border: 1px solid #ccc;
+        font-size: 14px;
+        height: 26px;
+        line-height: 24px;
+        margin: 0 3px;
+        width: 54px;
+    }
+
+    .zxfokbtn {
+        color: #4484db;
+        border: 1px solid #e0e0e0;
+        height: 26px;
+        display: inline-block;
+        line-height: 26px;
+        padding: 0 10px;
+        border-radius: 2px;
+    }
+}

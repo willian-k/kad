@@ -1,0 +1,387 @@
+.head_r {
+    width: 518px;
+    height: 52px;
+    float: right;
+    margin-top: 20px;
+}
+
+.order-msg-wrap .full-chose-box,
+.pro-list-box li label,
+.settle-0accounts label {
+    position: relative;
+    cursor: pointer;
+}
+
+.order-msg-wrap .other-msg span,
+.order-msg-wrap .pro-title,
+.order-msg-wrap .full-chose-box {
+    padding-left: 24px;
+    position: relative;
+    float: left;
+    font-weight: bold;
+}
+
+.order-msg-wrap .reduct-btn,
+.order-msg-wrap .add-btn,
+.order-msg-wrap .num-txt {
+    float: left;
+}
+
+.order-msg-wrap .cart-body .disb a,
+.order-msg-wrap .cart-body .disb a:hover {
+    color: #3c3c3c;
+}
+
+.order-msg-wrap .without-pay i,
+.order-msg-wrap .without-pay span {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.order-msg-wrap .go-back a,
+.order-msg-wrap .go-back a:hover {
+    color: #bbb;
+    font: bold 18px/20px "微软雅黑";
+    text-decoration: none;
+}
+
+.order-msg-wrap {
+    margin: 10px auto 0;
+    width: 1200px;
+    overflow: hidden;
+
+    .full-chose-box {
+        i {
+            top: 12px !important;
+        }
+    }
+
+    .cart-thead {
+        padding-left: 10px;
+        font: normal 14px/36px "";
+        color: #666;
+        border: 1px solid #e0e0e0;
+        border-top: 2px solid #0066d4;
+        background: #f3f4f3;
+    }
+
+    .pro-title {
+        padding-left: 120px;
+    }
+
+    .other-msg {
+        float: right;
+
+        span {
+            padding-left: 0;
+            float: left;
+            text-align: center;
+            width: 120px;
+        }
+
+        .line {
+            padding: 0;
+            font-weight: normal;
+            width: 10px;
+        }
+    }
+
+    .cart-body {
+        margin-top: 10px;
+        border: 1px solid #e0e0e0;
+
+        .th-title {
+            padding-left: 45px;
+            font: bold 14px/34px "";
+            background: #f5f5f5;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        li {
+            padding: 8px 0 6px;
+            font-size: 0;
+            line-height: 0;
+            text-align: left;
+            border-bottom: 1px dotted #e0e0e0;
+        }
+
+        .act {
+            background: #f0f9ff;
+        }
+
+        .pro-list-box {
+            .disb {
+                display: inline-block;
+                font-size: 14px;
+                line-height: 20px;
+                color: #3c3c3c;
+                vertical-align: middle;
+            }
+
+            .item1 {
+                position: relative;
+                width: 32px;
+            }
+
+            .item2 {
+                width: 120px;
+                padding-left: 35px;
+
+                img {
+                    width: 100px;
+                }
+            }
+
+            .item3 {
+                padding: 0 24px 0 10px;
+                width: 244px;
+                clear: both;
+                overflow: hidden;
+            }
+
+            .item4 {
+                padding-left: 135px;
+                width: 90px;
+                color: #fe2424;
+                text-align: left;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                font-size: 16px;
+            }
+
+            .item5 {
+                padding-left: 18px;
+                width: 90px;
+                clear: both;
+                overflow: hidden;
+            }
+
+            .item6 {
+                padding-left: 40px;
+                width: 90px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                text-align: left;
+            }
+
+            .item8 {
+                width: 155px;
+                text-align: center;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+
+            .item9 {
+                width: 110px;
+                text-align: center;
+            }
+
+            .delte-btn {
+                cursor: pointer;
+            }
+
+            .save-price {
+                padding: 0 2px;
+                color: #fe2424;
+            }
+
+            .single-chose {
+                margin: 0 10px;
+            }
+
+            li {
+                label {
+                    float: left;
+                }
+            }
+
+            .icon01 {
+                margin-top: 2px;
+                margin-right: 6px;
+                width: 34px;
+                height: 16px;
+                background: url(../img/orderP_allbgs.png) no-repeat 0px -162px;
+            }
+
+            .icon0 {
+                float: left;
+                display: inline;
+                font-style: normal;
+                color: #fe2424;
+            }
+        }
+    }
+
+    .reduct-btn {
+        margin-top: 4px;
+        width: 14px;
+        height: 14px;
+        line-height: 14px;
+        color: #666;
+        border: 1px solid #dedede;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .num-txt {
+        display: inline;
+        margin: 0 6px;
+        width: 38px;
+        height: 22px;
+        line-height: 22px;
+        color: #333;
+        text-align: center;
+        border: 1px solid #dedede;
+    }
+
+    .settle-0accounts {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 12px 0;
+        height: 80px;
+        border: 1px solid #e0e0e0;
+
+        label {
+            i {
+                top: 2px;
+            }
+        }
+
+        .delte-full-btn {
+            display: inline;
+            margin-left: 26px;
+            padding-left: 20px;
+            float: left;
+            font-size: 14px;
+            background: url(../img/delete-iconPic01.png) no-repeat 0px 2px;
+            cursor: pointer;
+        }
+
+        .without-pay {
+            padding-right: 10px;
+            float: right;
+            font-size: 0;
+            line-height: 0;
+        }
+    }
+
+    label {
+        margin-left: 10px;
+        padding-left: 35px;
+        float: left;
+        font-size: 14px;
+
+        label {
+            .on {
+                background-position: 0px -150px;
+            }
+
+            i {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 12px;
+                height: 12px;
+                background: url(../img/orderP_allbgs.png) no-repeat 0px -125px;
+                overflow: hidden;
+            }
+        }
+    }
+
+    .go-pay-box {
+        margin-top: 12px;
+        padding: 12px 10px;
+        background: #f5f5f5;
+
+        .go-back {
+            padding-top: 12px;
+            float: left;
+            width: 94px;
+
+            i {
+                display: inline;
+                margin-top: 2px;
+                margin-right: 6px;
+                float: left;
+                width: 13px;
+                height: 16px;
+                background: url(../img/orderP_allbgs.png) no-repeat 0px -760px;
+            }
+        }
+
+        .cart-msg {
+            float: right;
+        }
+
+        .go-pay-btn {
+            margin-left: 22px;
+            float: right;
+            height: 38px;
+
+            a {
+                display: block;
+                width: 140px;
+                height: 38px;
+                background: url(../img/orderP_allbgs.png) no-repeat 0px -226px;
+            }
+        }
+
+        .product-total-price {
+            float: right;
+            padding-left: 5px;
+            padding-top: 12px;
+            font-size: 24px;
+            color: #fe2424;
+        }
+
+        .fr {
+            padding-top: 14px;
+            float: right;
+        }
+
+        .product-nums {
+            padding: 0 8px;
+            color: #fe2424;
+        }
+    }
+}
+
+.total-price {
+    padding-right: 30px;
+    line-height: 34px;
+    text-align: right;
+    color: #3c3c3c;
+}
+
+span.without-pay span {
+    margin-left: 50px;
+
+    font {
+        color: #FE2424;
+    }
+}
+
+.cart-nothings {
+    margin-left: 510px;
+    margin-top: 26px;
+    padding: 80px 0 100px 215px;
+    font: normal 14px/24px "";
+    color: #3c3c3c;
+    background: url(../img/kk-pic01.gif) no-repeat;
+    background-position-y: 75px;
+    height: 160px;
+
+    .title {
+        padding-bottom: 4px;
+        font-weight: bold;
+        font-size: 16px;
+        margin-top: 32px;
+    }
+    a{
+        color: #4484db;
+    }
+}

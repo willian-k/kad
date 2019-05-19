@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../lib/jquery-1.10.1.min.js"></script>
+    <script src="../js/common.js"></script>
+    <!-- <script src="./js/index.js"></script> -->
+    <link rel="stylesheet" href="../css/baseM3_double112016_2.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <title>Document</title>
+    <script>
+        window.onload = () => {
+            $('.hNavList').on('mouseover', 'li', function () {
+                $(this).addClass('Yhover');
+            })
+            $('.hNavList').on('mouseout', 'li', function () {
+                $(this).removeClass('Yhover');
+            })
+            $('#pageText').on('focus', function () {
+                $(this).css('color', 'rgb(51, 51, 51)');
+                $(this).attr('placeholder', '');
+                $('.search_history').show();
+            })
+            $('#pageText').on('blur', function () {
+                $(this).css('color', 'rgb(153, 153, 153)');
+                $(this).attr('placeholder', '铁打损伤');
+                $('.search_history').hide();
+            })
+            $('.search_history').on('mouseout', function () {
+                $('.search_history').hide();
+            })
+            $('.search_history').on('mouseover', '.search_history_r', function () {
+                $('.search_history').show();
+            })
+            $('.search_history').on('mouseover', '.search_history_l', function () {
+                $('.search_history').show();
+            })
+            $('#kad-mc-ask1').on('mouseover', function () {
+                $(this).css('color', 'rgb(0,99,200)');
+                $(this).children('i').css('border-color', 'rgb(0,99,205) transparent transparent');
+                $(this).children('#kad-mc-askBox1').show();
+            })
+            $('#kad-mc-ask1').on('mouseout', function () {
+                $(this).children('#kad-mc-askBox1').hide();
+                $(this).css('color', 'rgb(20,20,20)');
+                $(this).children('i').css('border-color', 'rgb(0,0,0) transparent transparent');
+            })
+            $('#kad-mc-ask2').on('mouseover', function () {
+                $(this).css('color', 'rgb(0,99,200)');
+                $(this).children('i').css('border-color', 'rgb(0,99,205) transparent transparent');
+                $(this).children('#kad-mc-askBox').show();
+            })
+            $('#kad-mc-ask2').on('mouseout', function () {
+                $(this).children('#kad-mc-askBox').hide();
+                $(this).css('color', 'rgb(20,20,20)');
+                $(this).children('i').css('border-color', 'rgb(0,0,0) transparent transparent');
+            })
+
+            function html1() {
+                var html = '';
+                for (var i = 0; i < 10; i++) {
+                    html += `<li>
+                        <div class="list_t">
+                            <a href="###"><b>专科用药</b></a>
+                            |
+                            <a href="###">肾宝片</a>
+                            &nbsp;
+                            <a href="###">阿胶</a>
+                        </div>
+                        <div class="lNav_pop">${i}</div>
+                    </li>`
+                }
+                $('#lNav_lists').html(html);
+            };
+            html1();
+            var usn = getCookie('username');
+            console.log(usn);
+            if (usn) {
+                $('.YnewNoLogin').hide();
+                $('.YnewYesLogin').show();
+                $('.YnewYesLogin').children('.YUserName').children('a').html(usn);
+            }
+            $('.Yout').on('click', 'a', function () {
+                removeCookie('username');
+                $('.YnewNoLogin').show();
+                $('.YnewYesLogin').hide();
+                location.href = 'denglu.html';
+            })
+            if (getCookie('username')) {
+                $.ajax({
+                    type: 'post',
+                    url: '../api/gouwuche.php',
+                    async: true,
+                    data: {
+                        u_name: getCookie('username'),
+                    },
+                    success: function (str) {
+                        var arr = JSON.parse(str);
+                        var abcd = 0;
+                        for (var i = 0; i < arr.length; i++) {
+                            abcd += arr[i].num * 1;
+                        }
+                        $('.tcart').find('span').html(abcd);
+                    }
+                })
+            }
+            $('#lNav_lists').on('mouseover', 'li', function () {
+                $(this).children('.lNav_pop').show();
+                $(this).children('.lNav_pop').css({
+                    'color': '#000',
+                    'font-size': '50px'
+                });
+                $(this).addClass('active');
+                $(this).find('a').css('color', '#3195ff');
+                $(this).find('b').css('color', '#036dde');
+            })
+            $('#lNav_lists').on('mouseout', 'li', function () {
+                $(this).children('.lNav_pop').hide();
+                $(this).removeClass('active');
+                $(this).find('a').css('color', '#c2d8fe');
+                $(this).find('b').css('color', '#fff');
+            })
+        }
+    </script>
+    <style>
+        .active {
+            background: #fff;
+            border-bottom: 1px solid #036dde;
+            color: #5991e5;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="layout">
+        <div class="head_t">
+            <div class="head_t_l">
+                <div class="YnewNoLogin">
+                    欢迎来到康爱多网上药店！
+                    <a href="denglu.html">登录</a>
+                    <a href="zhuce.html">注册</a>
+                </div>
+                <ul class="YnewYesLogin" style="display: none;">
+                    <li>欢迎回来！</li>
+                    <li class="YUserName">
+                        <a href="###"></a>
+                    </li>
+                    <li class="Yout">
+                        <a href="###">退出</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="head_t_r">
+                <ul class="hNavList">
+                    <li class="Ywebnav">
+                        <span class="Ycen"></span>
+                        <span class="Yico_dian"></span>
+                        <span class="tlast">网站导航</span>
+                        <div class="Ytopnavdiv">
+                            <dl>
+                                <dt>特色频道</dt>
+                                <dd><a href="###">男科中心</a></dd>
+                                <dd><a href="###">医疗器械</a></dd>
+                            </dl>
+                            <dl class="d2">
+                                <dt>健康工具</dt>
+                                <dd><a href="###">掌上药店</a></dd>
+                                <dd><a href="###">自助找药</a></dd>
+                            </dl>
+                            <dl>
+                                <dt>健康知多点</dt>
+                                <dd><a href="###">健康指南</a></dd>
+                                <dd><a href="###">健康问答</a></dd>
+                                <dd><a href="###">肝胆科</a></dd>
+                                <dd><a href="###">皮肤科</a></dd>
+                                <dd><a href="###">呼吸科</a></dd>
+                                <dd><a href="###">减肥瘦身</a></dd>
+                                <dd><a href="###">两性健康</a></dd>
+                                <dd><a href="###">妇科</a></dd>
+                                <dd><a href="###">母婴</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="YService">
+                        <span class="Ycen"></span>
+                        <span class="Yico_dian"></span>
+                        <span class="tlast">客户服务</span>
+                        <div class="Ytopnavdiv">
+                            <dl class="Ymykadc">
+                                <dd><a rel="nofollow" href="###">帮助中心</a></dd>
+                                <dd><a rel="nofollow" href="###">联系我们</a></dd>
+                                <dd><a rel="nofollow" href="###">投诉建议</a></dd>
+                                <dd style="display:none"><a rel="nofollow" href="###">厂商合作</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="ttel">400-8811-020</li>
+                    <li class="tcart"><a href="gouwuche.html">购物车<span name="kadCartNum"
+                                style="color:red;padding:0;font-weight:bold;">0</span>件</a></li>
+                    <li class="Ymyorder">
+                        <span class="Ycen"></span>
+                        <span class="Yico_dian"></span>
+                        <a rel="nofollow" href="###" class="tlast">我的订单</a>
+                        <div class="Ytopnavdiv">
+                            <dl class="Ymyorderc">
+                                <dd class="YNopay"><a rel="nofollow" href="###">待付款订单</a>
+                                </dd>
+                                <dd class="YNosure"><a rel="nofollow" href="###">待确认收货</a>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="Ymykad">
+                        <span class="Ycen"></span>
+                        <span class="Yico_dian"></span>
+                        <a rel="nofollow" href="###" class="tlast">我的康爱多</a>
+                        <div class="Ytopnavdiv">
+                            <dl class="Ymykadc">
+                                <dd><a rel="nofollow" href="###">我的处方</a></dd>
+                                <dd><a rel="nofollow" href="###">我的收藏</a></dd>
+                                <dd><a rel="nofollow" href="###">收货地址</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="header-bg">
+        <div class="header">
+            <div class="header_l" style="width: 342px; float: left;">
+                <a href="../ind.html"><img src="../img/CgAgFVviryCAErgRAABrkiEX-ts677.gif"></a>
+            </div>
+            <div class="header_r">
+                <form name="search" id="searchForm" style="">
+                    <div class="header_search" id="txtSearchbox1">
+                        <input id="pageText" name="pageText" value="" class="stxt" placeholder="铁打损伤">
+                        <input type="submit" class="sbtn" value="搜索" id="BtnSearchProdut">
+
+                        <div class="search_history">
+                            <div class="search_history_l">
+                                <div class="y_history">
+                                    <p class="search_history_t">历史记录：<span><a href="javascript:;" id="his_clearAll"
+                                                style="display:none;" onclick="delSeacHislist()">清空</a></span></p>
+                                    <ul class="s_historylist" id="s_historylist"></ul>
+                                    <div class="no_history">
+                                        <p><img src="../img/no-history.jpg" alt=""></p>
+                                        <p>亲，您还没有历史记录哦</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="search_history_r">
+                                <p>正在热搜中：</p>
+                                <div id="s_history_r">
+                                    <a href="###" title="生精片">生精片</a>
+                                    <a href="###" title="前列腺炎">前列腺炎</a>
+                                    <a href="###" title="恩替卡韦">恩替卡韦</a>
+                                    <a href="###" title="阿达帕林凝胶">阿达帕林凝胶</a>
+                                    <a href="###" title="金匮肾气丸">金匮肾气丸</a>
+                                    <a href="###" title="锁阳固精丸">锁阳固精丸</a>
+                                    <a href="###" title="皮肤性病">皮肤性病</a>
+                                    <a href="###" title="安宫牛黄丸">安宫牛黄丸</a>
+                                    <a href="###" title="麒麟丸">麒麟丸</a>
+                                    <a href="###" title="康瑞保">康瑞保</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+                <p class="header_r_d">
+                    <a style="color:black" href="###" adid="v2_searchHotWord_07">营养保健</a>
+                    <a style="color:red" href="###" adid="v2_searchHotWord_03">滋补养生</a>
+                    <a style="color:#959595" href="###" adid="v2_searchHotWord_04">防治口腔溃疡</a>
+                    <a style="color:black" href="###" adid="v2_searchHotWord_11">男得好货</a>
+                    <a style="color:red" href="###" adid="v2_searchHotWord_08">拼团低至9.9元</a>
+                    <a style="color:black" href="###" adid="v2_searchHotWord_02">体检卡</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="nav" style="position: relative; ">
+        <div class="navc  itmes_wrap">
+            <div class="categorys">
+                <h2>
+                    <a href="###">全部分类</a>
+                </h2>
+                <div class="lNav" style="display:block;">
+                    <ul class="lNav_lists" id="lNav_lists">
+                        <!-- <li>
+                            <div class="list_t">
+                                <a href="###"><b>专科用药</b></a>
+                                |
+                                <a href="###">肾宝片</a>
+                                &nbsp;
+                                <a href="###">阿胶</a>
+                            </div>
+                            <div class="lNav_pop"></div>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+            <ul class="navclist">
+                <li>
+                    <a href="###">首页</a>
+                </li>
+                <li>
+                    <a href="liebiaoye.html">药品</a>
+                </li>
+                <li>
+                    <a href="###">非药品</a>
+                </li>
+                <li>
+                    <a href="###">男科中心</a>
+                </li>
+                <li>
+                    <a href="###">美肤商城</a>
+                </li>
+                <li style="width:2px;">
+                    <span style="display:block;margin-top:13px;width:1px;height: 14px;background: white;"></span>
+                </li>
+                <li class="kad-mc-ask" id="kad-mc-ask1" style="color: rgb(20, 20, 20);">
+                    <a href="javascript:void(0);">资讯中心</a>
+                    <i
+                        style="border-color: rgb(0, 0, 0) transparent transparent; width: 0px; height: 0px; border-width: 5px; font-size: 0px; line-height: 0; border-style: solid dashed dashed;"></i>
+
+                    <div class="kad-mc-askBox" id="kad-mc-askBox1" style="width: 222px; height: 96px; display: none;">
+                        <a class="pl16" title="健康指南" href="###">健康指南</a>
+                        <a title="健康资讯" href="###">健康资讯</a>
+                        <a class="pl16" title="皮肤科资讯" href="###">皮肤科资讯</a>
+                        <a title="呼吸科资讯" href="###">呼吸科资讯</a>
+                        <a class="pl16" title="妇科资讯" href="###">妇科资讯</a>
+                        <a title="减肥瘦身" href="###">减肥瘦身</a>
+                        <a class="pl16" title="两性健康" href="###" style="">两性健康</a>
+                        <a title="健康问答" href="###">健康问答</a>
+                    </div>
+
+                </li>
+                <li>
+                    <a href="###">慢性病专场</a>
+                </li>
+                <li class="kad-mc-ask" id="kad-mc-ask2" style="color: rgb(20, 20, 20);">
+                    <a href="javascript:void(0);">掌上康爱多</a>
+                    <i
+                        style="border-color: rgb(0, 0, 0) transparent transparent; width: 0px; height: 0px; border-width: 5px; font-size: 0px; line-height: 0; border-style: solid dashed dashed;"></i>
+
+                    <div class="kad-mc-askBox" id="kad-mc-askBox"
+                        style="width: 140px; height: 355px; text-align: center; border-width: 0px 1px 1px; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-right-color: rgb(218, 218, 218); border-bottom-color: rgb(218, 218, 218); border-left-color: rgb(218, 218, 218); border-image: initial; border-top-style: initial; border-top-color: initial; display: none;">
+                        <img src="../img/hand.png" style="margin-top:19px;">
+                        <p class="fistP">4件装仅9.9元</p>
+                        <p class="secendP">APP首单减10元</p>
+                        <img src="../img/hand2.jpg" style="margin-top:6px;">
+                        <p class="fistP">关注微信</p>
+                        <p class="secendP">抽现金红包</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="###">超值秒杀</a>
+                </li>
+
+            </ul>
+        </div>
+
+</body>
+
+</html>

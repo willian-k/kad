@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../lib/jquery-1.10.1.min.js"></script>
+    <script src="../js/common.js"></script>
+    <link rel="stylesheet" href="../css/base.css">
+    <script src="../js/denglu.js"></script>
+    <link rel="stylesheet" href="../css/denglu.css">
+</head>
+
+<body>
+    <div id="header"></div>
+    <div id="container" class="container" style="background:#4ec3ff">
+        <div class="container-wrap clearfix">
+            <div class="container-left">
+                <img src="../img/CgAgEVctrCiAC1slAAHd-utbGgk880.jpg">
+            </div>
+            <div class="container-right">
+                <div class="container-right-wrap">
+                    <span style="cursor:pointer" class="container-ewm"><img src="../img/login_ewm.jpg"></span>
+                    <h3 class="login-title">欢迎登录</h3>
+                    <p style="display:none" class="login-prompt clearfix">
+                        <i class="prompt-icon"></i>
+                        <span class="prompt-size">公共场所不建议免登录，以防账号丢失，造成不必要损失</span>
+                    </p>
+                    <div class="login-input clearfix">
+                        <i class="input-icon"></i>
+                        <input class="Linput" type="text" name="" id="UserName" placeholder="请输入用户名/手机号码/邮箱">
+                    </div>
+                    <div id="idPrompt" class="prompt-wrap">
+                        <p class="input-prompt clearfix" style="display:none">
+                            <i class="prompt-icon"></i>
+                            <span class="prompt-size">您输入的账户名不存在或密码不匹配，请从新输入！</span>
+                        </p>
+                    </div>
+                    <p class="login-input pwd-input clearfix">
+                        <i class="input-icon"></i>
+                        <input class="Linput" type="password" name="" id="UserPassword" value="" placeholder="请输入您的密码">
+                    </p>
+                    <div id="pwdPrompt" class="prompt-wrap">
+                        <p class="input-prompt clearfix" style="display:none">
+                            <i class="prompt-icon"></i>
+                            <span class="prompt-size">密码长度应在6-20位之间！</span>
+                        </p>
+                    </div>
+                    <p class="login-select clearfix">
+                        <input class="Cinput" type="checkbox" name="" id="IsRemberName" value="false">
+                        <span class="Csize">3天免登录</span>
+                    </p>
+                    <a href="javascript:;" id="LoginButton" class="login-btn">登&nbsp;&nbsp;&nbsp;&nbsp;录</a>
+                    <p class="login-register clearfix">
+                        <a href="zhuce.html" class="register-left">免费注册&gt;</a>
+                        <a href="###" class="register-right">忘记密码？</a>
+                    </p>
+                    <div class="login-order">
+                        <p class="order-title">
+                            <span class="order-size">使用合作网站帐号登录康爱多</span>
+                        </p>
+                        <div class="order-cont">
+                            <ul class="clearfix">
+                                <li class="li1"><a title="微信登录" href="###"></a>
+                                </li>
+                                <li class="li2"><a title="QQ登录" href="###"></a>
+                                </li>
+
+                                <li class="li4"><a title="支付宝登录" href="###"></a>
+                                </li>
+                                <li class="li5"><a title="新浪微博登录" href="###"></a>
+                                </li>
+                                <li class="li6"><a title="健保通（医卡通）登录" href="###"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-right-wrap" style="display: none;" id="qrLogin">
+                    <span style="cursor:pointer" class="container-ewm"><img src="../img/login_pc.jpg"></span>
+                    <h3 class="login-title">扫码登录，更安全</h3>
+                    <div id="qrScan" style="display:block">
+                        <div class="sm-pic clearfix">
+                            <p class="sm-pic-left fl" style="margin-left: 88px;"><img width="150"
+                                    src="../img/LoginPC.jpg" id="qrLoginImage"></p>
+                            <p class="sm-pic-right fl"><img src="../img/phone-right.jpg"></p>
+                        </div>
+                        <div id="qrScanFaild"
+                            style="width: 150px; height: 150px; position: absolute; top: 140px; left: 116px; z-index: 10; display: none;">
+                            <img src="../img/ewm_error.png" id="freshQrImage"
+                                style="width: 100%; display: inline-block; cursor: pointer;">
+                        </div>
+                        <p class="sm-icon sm-icon2 clearfix"><i><img src="../img/smICon.jpg"></i><span>请使用 <a href="###"
+                                    style="color:#0099ff">康爱多APP</a>
+                                扫码登录</span></p>
+                    </div>
+                    <div id="qrScanSuccess" style="display:none">
+                        <div class="sm-pic"><img src="../img/sm_success.jpg"></div>
+                        <p class="sm-icon clearfix"><i><img src="../img/smICon.jpg"></i><span>扫码成功</span></p>
+                        <p class="sm-font">请在手机上确认登录</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+</body>
+
+</html>
